@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Previsão do Tempo</title>
+  <link rel="stylesheet" href="css/lottie.css">
+  <link rel="stylesheet" href="css/clima.css">
+</head>
+<body>
+  <div id="ceu" class="ceu" data-clima="Clear" aria-hidden="true"><div class="sol"><div class="raios"></div></div><div class="nuvens nuvens--longe"></div><div class="nuvens nuvens--perto"></div><canvas id="precipitacao"></canvas><div class="neblina"></div><div class="flash"></div></div>
+  <main class="container">
+    <section class="painel-pesquisa">
+      <div class="paisagem-busca" aria-hidden="true"><div class="sol-busca"></div><div class="nuvem-busca"></div><div class="montanha-busca"></div><div class="lago-busca"></div></div>
+      <header><p class="marca">CLIMA AGORA</p><h1>Previsão do tempo</h1><p class="subtitulo">Veja as condições da sua cidade em tempo real.</p></header>
+      <form id="formulario-busca"><div class="campo-cidade"><label class="sr-only" for="cidade">Cidade</label><input id="cidade" name="cidade" placeholder="Digite uma cidade..." autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="sugestoes-cidades" aria-describedby="status-cidades" required><ul id="sugestoes-cidades" class="sugestoes-cidades" role="listbox" aria-label="Cidades sugeridas" hidden></ul></div><button type="submit">Pesquisar</button></form>
+      <p id="status-cidades" class="status-cidades" role="status" aria-live="polite"></p>
+      <button id="botao-localizacao" class="botao-localizacao" type="button">⌖ Usar minha localização</button>
+      <p id="mensagem" class="mensagem" role="alert"></p>
+    </section>
+    <section id="previsao" hidden>
+      <section class="cartao atual"><div><p class="rotulo-local">CLIMA NA SUA CIDADE</p><h1 id="local" class="local"></h1><div class="temperatura"><span id="temperatura"></span><div id="icone-atual" class="icone-lottie icone-lottie--destaque" role="img"></div></div><p id="condicao" class="condicao"></p><p>Sensação térmica: <strong id="sensacao"></strong></p><p id="extremos"></p></div></section>
+      <section class="cartao"><h2>Previsão por hora</h2><div id="horas" class="horas"></div></section>
+      <section id="area-dias" class="cartao" hidden><h2>Previsão para 10 dias</h2><div id="dias" class="dias"></div></section>
+      <section class="cartao"><h2>Condições atuais</h2><div class="metricas"><div><span>Umidade</span><strong id="umidade"></strong></div><div><span>Vento</span><strong id="vento"></strong></div><div><span>Direção</span><strong id="direcao"></strong></div></div></section>
+      <section id="area-avisos" class="avisos" hidden><h2>Avisos meteorológicos</h2><div id="lista-avisos"></div></section>
+    </section>
+  </main>
+  <script src="js/vendor/lottie.min.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug: Backend Spring Boot",
+      "request": "launch",
+      "mainClass": "br.com.previsaotempo.PrevisaoTempoApplication",
+      "projectName": "backend",
+      "cwd": "${workspaceFolder}/backend"
+    }
+  ]
+}
